@@ -1,4 +1,23 @@
+<?php
+ $to="akshith.pakalapati@gmail.com";
+ $subject=$_POST['subject'];
+ $name=$_POST['name'];
+ $mail=$_POST['email'];
+ $number=$_POST['number'];
+ $description=$_POST['description'];
 
+ $message="
+    User information:
+         Name: $name;
+         Email: $email;
+         Number:$number;
+         Project Description:$description;
+";
+
+ $header=$email;
+     mail($to,$subject,$message,$header);
+     echo "Mail sent successfully";
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
  <head>
@@ -51,27 +70,19 @@ It typically took several months to complete our good plan. Most of that time is
   <section class="cd-section">
    <div id=#5>
       <h2 style="margin-top:-19.53125%">Contact</h2>
-       <div style="width:40%;margin-left:10%;float:right" >
-            <form style="margin-top:-44.041667%;margin-bottom:45.57291666666667%;color:black">
+       <div style="width:50%;margin-left:10%;float:left" >
+            <form style="margin-top:-20.04166666666667%;margin-bottom:45.57291666666667%;color:black;">
                 <input type="text" name="name" size="30" placeholder="Full name"/><br><br>
                 <input id="to" type="text" name="email" size="30" placeholder=" E-mail ID "/><br><br>
                 <input id="subject" type="text" name="subject" size="30" placeholder="Write Subject" /><br><br>
-                <input id="num" type="number" style="width:263px" name="number" placeholder="Mobile number" /><br><br>
+                <input id="num" type="number" size="30" name="number" placeholder="Mobile number" /><br><br>
                 <textarea id="content" cols="30" rows="5" name="description" placeholder="Project description"></textarea><br><br>
-                <button class="btn btn-sm btn-info" name="submit" id="send_email" style="width:100px;margin-left:12.5%">Send</button><br><br>
+                <button class="btn btn-sm btn-info" name="submit" id="send_email">Send</button><br><br>
                 <span id="message"></span>
            </form>
        </div>
-       <div style=" width:30%;margin-left:10%;float:left">
-           <!--<img class="img-circle" src="img/logo3.png" style="width:250px;height:250px;margin-top:-20.04166666666667%;margin-bottom:45.57291666666667%"/>-->
-           <p style="width:250px;height:250px;margin-top:-58.041667%;margin-bottom:45.57291666666667%"><font size="10">Frescom</font> <br><br>
-            P. Ravi Shankar<br><br>
-            5-163/d, Behind Sai Temple, Thimmapuram<br><br>
-            Kakinada, 533005.<br><br>
-            +917382874551<br><br>
-            ravioverlord@gmail.com<br><br>
-
-           </p>
+       <div style=" width:50%;margin-left:10%;float:right">
+           <img src="img/logo3.png" style="width:250px;height:250px;margin-top:-20.04166666666667%;margin-bottom:45.57291666666667%"/>
        </div>
    </div>
   </section>
